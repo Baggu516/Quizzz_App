@@ -1,28 +1,28 @@
 const Data=[{
-    Q:"What is your name?",
-    a:"ram",
-    b:"ravi",
-    c:"revi",
+    Q:"1+2+3+4 ?",
+    a:"5",
+    b:"9",
+    c:"10",
     solution:"c"
 },
 {
-    Q:"What is aim ?",
-    a:"doctor",
-    b:"r",
-    c:"revi1",
+    Q:"Capital of Ap?",
+    a:"TamilNadu",
+    b:"Vishakapatam",
+    c:"Amaravati",
     solution:"c"
 },
 {
-    Q:"What is your name1?",
-    a:"ram",
-    b:"ravi",
-    c:"revi1",
+    Q:"React js is a ____?",
+    a:"Database",
+    b:"Backend",
+    c:"JS Library",
     solution:"c"
 },{
-    Q:"What is your name1?",
-    a:"ram",
-    b:"ravi",
-    c:"revi1",
+    Q:"cube of 12?",
+    a:"1873",
+    b:"1564",
+    c:"1728",
     solution:"c"
 }]
 export default Data
