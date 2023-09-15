@@ -4,7 +4,7 @@ import {store} from '../App'
 const End = () => {
     const {score,setScore}=useContext(store)
   return (
-    <div>
+    <div className="end">
         <h1>Your Score : {score}</h1>
         {score<2?<p>Need to Improve</p>:<p>Good score</p>}
     </div>
