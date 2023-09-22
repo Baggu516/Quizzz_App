@@ -26,8 +26,8 @@ function App() {
           </h1> */}
           <b>QUIZ APP</b>
         </Alert>
-        <div className="game-container">
-        {game == "menu" &&<img src="/images/home1.jpg" alt="quiz" className="image" />}
+        <div >
+        {/* {game == "menu" &&} */}
           <div className="game">
             {game == "menu" && <Menu />}
             {game == "quiz" && <Quiz />}

@@ -19,10 +19,18 @@ const Data=[{
     c:"JS Library",
     solution:"c"
 },{
-    Q:"cube of 12?",
+    Q:"value of 12*12*12?",
     a:"1873",
     b:"1564",
     c:"1728",
     solution:"c"
-}]
+},
+{
+    Q:"Virat kohli is a ____?",
+    a:"cricketer",
+    b:"photographer",
+    c:"swimmer",
+    solution:"a"
+},
+]
 export default Data

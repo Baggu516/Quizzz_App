@@ -6,7 +6,7 @@ const End = () => {
   return (
     <div className="end">
         <h1>Your Score : {score}</h1>
-        {score<2?<p>Need to Improve</p>:<p>Good score</p>}
+        {score<3?<p>Need to Improve</p>:<p>Good score</p>}
     </div>
   )
 }
