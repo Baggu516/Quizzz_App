@@ -19,7 +19,7 @@ const Quiz = () => {
   // testing for backfunction whether it is trigger or not
   const [backfunction, setBackfunction] = useState(false);
   //...storre.....
-  const { game, setGame, score, setScore } = useContext(store);
+  const { game, setGame, score, setScore,tick,setTick } = useContext(store);
   //  const [score,setScore]=useState(0)
   // console.log(score, "score");
   //........................
@@ -119,6 +119,7 @@ const Quiz = () => {
     setOption(option);
     let t = [...optionArr, option];
     // setOptionArr([...t])
+    setTick([...t])//storing option in global state used in end component
     console.log(t, "finalll222");
     let scoreTemp=score
     Data.map((item, index) => {

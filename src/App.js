@@ -10,11 +10,14 @@ export const store = createContext();
 function App() {
   const [game, setGame] = useState("menu");
   const [score, setScore] = useState(0);
+  const [tick,setTick]=useState([])
   let globaldata = {
     game: game,
     setGame: setGame,
     score: score,
     setScore: setScore,
+    tick:tick,
+    setTick:setTick
   };
   return (
     <div className="App">

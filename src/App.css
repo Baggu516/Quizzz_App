@@ -74,6 +74,33 @@ button{
   padding: 0.5rem;
   color: rgb(14, 17, 20);
 }
+/* end component................ */
+.allquestions{
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  flex-direction: column;
+}
+.optionButton{
+  width: 10rem;
+  margin: 0.5rem;
+}
+.solution{
+  background-color: rgb(240, 206, 13);
+  display: inline;
+  width: 6rem;
+  margin: 3rem;
+  padding: 0.2rem;
+}
+.singlequestion{
+  margin: 2rem;
+}
+.heading{
+  background-color: rgb(250, 22, 22);
+  width: 15rem;
+  text-align: center;
+  margin-left: 1rem;
+}
 @media only screen and (max-width: 768px) {
   .quiz-container{
     display: flex;
@@ -88,6 +115,15 @@ button{
     flex-direction: column;
     align-items: center; */
     display: none;
+    }
+    .allquestions{
+      display: flex;
+      justify-content:center;
+      /* align-items: center; */
+      flex-direction: column;
+    }
+    h2{
+      font-size: x-large;
     }
 
 }
