@@ -96,10 +96,12 @@ button{
   margin: 2rem;
 }
 .heading{
-  background-color: rgb(250, 22, 22);
+  background-color:blueviolet;
   width: 15rem;
   text-align: center;
   margin-left: 1rem;
+  opacity: 0.9;
+  color: black;
 }
 @media only screen and (max-width: 768px) {
   .quiz-container{

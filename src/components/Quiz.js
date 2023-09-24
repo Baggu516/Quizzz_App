@@ -13,7 +13,7 @@ const Quiz = () => {
   const [n, setN] = useState(0);
   const [option, setOption] = useState("Not select yet");
   const [optionArr, setOptionArr] = useState([]);
-  //   disabling button
+  //   disabling button arr
   const [dis, setDis] = useState([...arr]);
   const [disValue, setDisValue] = useState();
   // testing for backfunction whether it is trigger or not
@@ -23,10 +23,17 @@ const Quiz = () => {
   //  const [score,setScore]=useState(0)
   // console.log(score, "score");
   //........................
+  // ************88
+  // save & next button disable variable
+  const [save,SetSave]=useState(true)
+  // ************88
   // console.log(game, score);
   //...evaluation question...
   const evaluate = (e) => {
     setDis([...arr]);
+     // disableing saveand next button, whenever we are going to next question
+     SetSave(true)
+    //  ....................
     e.preventDefault();
     // let temArr=[...optionArr]
     // temArr.push(option)
@@ -64,6 +71,7 @@ const Quiz = () => {
         const updatedArr = [...arr];
         updatedArr[text] = !updatedArr[text];
         setDis([...updatedArr]);
+        SetSave(false)
       } else {
         setOption("Not select yet");
       }
@@ -81,9 +89,11 @@ const Quiz = () => {
     console.log(n, "testtttttinggggg1");
     // console.log(dis,"hhhhhhhhhhhhhhhhhhhhhhh")
     // console.log(n, "nnnnnnnnnnnnnnnnnnnnnn");
+   
   };
   //  function for backward and forward
   const BackwardandForward = () => {
+    SetSave(false)
     setN((prev) => prev - 1);
     //  let temp=n
     var text;
@@ -139,6 +149,8 @@ const Quiz = () => {
 
   const Option1 = (e) => {
     console.log(e.target.disabled);
+    SetSave(false)
+
     // e.target.disabled=!dis[0]
     console.log(e.target.disabled);
     setOption("a");
@@ -150,6 +162,8 @@ const Quiz = () => {
   };
   const Option2 = (e) => {
     console.log(e.target.disabled);
+    SetSave(false)
+
     // e.target.disabled=!dis[1]
     setOption("b");
     setDisValue(1);    // const updatedArray = [...arr];
@@ -160,6 +174,8 @@ const Quiz = () => {
   console.log(dis,"opt2222222222222222222222")
   const Option3 = (e) => {
     console.log(e.target.disabled);
+    SetSave(false)
+
     // e.target.disabled=!dis[2]
     setOption("c");
     setDisValue(2);
@@ -241,7 +257,7 @@ const Quiz = () => {
             }}
           >
             {n > 0 && <Button onClick={handleBack}>Back</Button>}
-            <Button onClick={evaluate}>Save & Next</Button>
+            <Button onClick={evaluate} disabled={save}>Save & Next</Button>
           </div>
         ) : (
           <div
@@ -252,7 +268,7 @@ const Quiz = () => {
             }}
           >
             <Button onClick={handleBack}>Back</Button>
-            <Button onClick={finish}>SUBMIT</Button>{" "}
+            <Button onClick={finish} disabled={save}>SUBMIT</Button>{" "}
           </div>
         )}
       </div>
